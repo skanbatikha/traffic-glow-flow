@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { CarCountCard } from '@/components/CarCountCard';
 import { TrafficLightStatus } from '@/components/TrafficLightStatus';
 import { ConnectionStatus } from '@/components/ConnectionStatus';
-import { useWebSocket } from '@/hooks/useWebSocket';
+import { useSocketIO } from '@/hooks/useSocketIO';
 import { startDemoMode } from '@/utils/demoData';
 
 interface TrafficData {
@@ -27,7 +26,7 @@ const Index = () => {
   });
   const [isDemoMode, setIsDemoMode] = useState(false);
 
-  const { isConnected, lastMessage } = useWebSocket('ws://localhost:5000/ws');
+  const { isConnected, lastMessage } = useSocketIO(import.meta.env.VITE_FLASK_URL || 'http://localhost:5000');
 
   // Start demo mode if not connected after 3 seconds
   useEffect(() => {
