@@ -6,10 +6,10 @@ export const generateDemoTrafficData = () => {
   
   return {
     carCounts: {
-      north: Math.floor(Math.random() * 80) + 10,
-      south: Math.floor(Math.random() * 80) + 10,
-      east: Math.floor(Math.random() * 80) + 10,
-      west: Math.floor(Math.random() * 80) + 10,
+      north: Math.floor(Math.random() * 5) + 1,
+      south: Math.floor(Math.random() * 5) + 1,
+      east: Math.floor(Math.random() * 5) + 1,
+      west: Math.floor(Math.random() * 5) + 1,
     },
     trafficLights: lanes.map(lane => ({
       lane,
