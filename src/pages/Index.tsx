@@ -85,13 +85,6 @@ const Index = () => {
           </h1>
           <p className="text-xl text-gray-300">Real-time car counts and traffic light monitoring</p>
           <ConnectionStatus isConnected={isConnected} />
-          {isDemoMode && (
-            <div className="mt-2">
-              <span className="inline-flex px-3 py-1 rounded-full text-sm font-medium bg-yellow-500/20 text-yellow-300 border border-yellow-500/30">
-                🔄 Demo Mode Active - Simulated Data
-              </span>
-            </div>
-          )}
         </div>
 
         {/* Car Counts Grid */}
